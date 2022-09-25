@@ -19,7 +19,6 @@ public class TelnetTerminal {
     private Path current;
     private ServerSocketChannel server;
     private Selector selector;
-
     private String dir = "/home/vitaly";
     private ByteBuffer buf;
 
