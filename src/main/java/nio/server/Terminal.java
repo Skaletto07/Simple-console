@@ -14,7 +14,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class TelnetTerminal {
+public class Terminal {
 
     private Path current;
     private ServerSocketChannel server;
@@ -22,7 +22,7 @@ public class TelnetTerminal {
     private String dir = "/home/vitaly";
     private ByteBuffer buf;
 
-    public TelnetTerminal() throws IOException {
+    public Terminal() throws IOException {
         current = Path.of(dir);
         buf = ByteBuffer.allocate(256);
         server = ServerSocketChannel.open();
@@ -118,7 +118,7 @@ public class TelnetTerminal {
     }
 
     public static void main(String[] args) throws IOException {
-        new TelnetTerminal();
+        new Terminal();
 
 
     }
